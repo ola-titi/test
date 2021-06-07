@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+          * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+          }
+        html {
+            position: relative;
+        }
+        body {
+            width: 100%;
+            min-height: 100vh;
+            position: relative;
+            overflow-y: scroll;
+            overflow-x: hidden;
+        }
+        nav {
+            position:sticky;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 0 0.5rem;
+            border-bottom: solid gainsboro;
+            background: gainsboro;
+
+        }
+        #tm {
+            width: 4rem;
+            height: auto;
+            border-radius: 50%;
+            margin: 0.5rem;
+            margin-right: auto;
+        }
+        nav p {
+            margin: 0 1rem;
+            padding-bottom: 0.5rem ;
+            border-bottom: brown 0.2rem hidden;
+        }
+        nav > p:hover {
+            animation-name: udrln;
+            animation-duration: 0.5s;
+            animation-fill-mode: forwards;
+            border-color: gainsboro;
+            border-bottom: solid
+        }
+        @keyframes udrln {
+            to {
+                border-color: gray;
+            }
+        }
+        #colors {
+            position: sticky;
+            width: 100%;
+            height: 0.4rem;
+            background: url(https://media0.giphy.com/media/dAWZiSMbMvObDWP3aA/200w.gif);
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+        #colors p {
+            opacity: 0;
+        }
+        #box {
+            width: 1.75rem;
+            height: 1.75rem;
+            margin-bottom: 0.35rem;
+            margin-right: 1rem;
+            margin-left: 1rem ;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            align-content: center;
+            border-radius: 0%;
+            overflow: hidden;
+        }
+        #box:hover p {
+            background: black;
+        }
+        #box p {
+            font-size: 0.3rem;
+            margin: auto 0;
+            padding: 0;
+            width: 100%;
+        }
+        #one, #two, #three{
+            background: gray;
+            color: gray;
+            animation-name: none;
+        }
+
+        main {
+            margin: 1rem;
+            margin-right: 2.5rem;
+            height: 40rem;
+            margin-top: 3rem;
+        }
+        main p {
+            text-align:justify;
+            font-size: 15rem;
+            text-align: center;
+        }
+        main h1,h2 {
+            text-align: center;
+            padding-bottom: 2rem;
+        }
+        main h2 {
+            margin-top: 5rem;
+            color: cornflowerblue;
+        }
+        img[alt = "back to top"] {
+            width: 100%;
+            height: auto;
+        }
+        a#top {
+            width: 2rem;
+            position: fixed;
+            bottom: 5.4rem;
+            right: 0;
+        }
+        #top:hover, #bottom:hover {
+            opacity: 50%;
+
+        }
+        #bottom {
+            width: 2.5rem;
+            transform: rotate(180deg);
+            position: fixed;
+            top: 5.5rem;
+            right: 0;
+        }
+        #bottom, #top {
+            animation-duration: 0.5s;
+            animation-fill-mode: forwards;
+        }
+        footer {
+            background: gainsboro;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 1rem ;
+            padding-bottom: 1rem;
+
+        }
+        footer a, img {
+            width: 2rem;
+            height: auto;
+            border-radius: 50%;
+        }
+        #footer div {
+            margin:0.5rem 0;
+        }
+        @keyframes hidee {
+            to {
+                opacity: 0%;
+            }
+
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav id="nav">
+        <img id="tm" src="https://ae01.alicdn.com/kf/HTB1xAtOc3fN8KJjSZFIq6A0UFXa6/The-Thinker-Statue-Sculpture-by-Rodin-Bronze-Replica-Classical-Nude-Thinking-Man-Famous-Art-Vintage-Home.jpg_Q90.jpg_.webp" alt="thinking man">
+        <p id="books" >Books</p>
+        <p id="home">Home</p>
+        <p id="about">About</p>
+        <div id="box">
+            <p id="one">A</p>
+            <p id="two">A</p>
+            <p id="three">A</p>
+        </div>
+    </nav>
+    </header>
+    <div id="colors">
+        <p id="incolors">no content</p>
+    </div>
+    <main>
+        <h1 id="heading">Your BMI is:</h1>
+        <p id="bmi" style="color: black;">BMI</p>
+        <h2 id="advice">Calculating...</h2>
+    </main>
+    <footer id="footer">
+        <div id="imgDiv">
+
+            <a id="gh" href="https://github.com/HamzaAhmad97" target="_blank"><img id="github" src="https://acm.cs.purdue.edu/static/assets/img/landing/projects/defaulticon.svg" alt="github"></a>
+
+            <a id="tw" href="https://twitter.com/rrrra_ra" target="_blank"><img id="twitter" src="https://i.pinimg.com/originals/18/62/54/1862545290c37456f7fc801002c17893.png" alt="twitter"></a>
+
+        </div>
+        
+        <p id="copyright">Copyright &#169; 2021 by Hamza Ahmad</p>
+    </footer>
+
+    <a id="top" href="#nav" ><img  src="https://pngimage.net/wp-content/uploads/2018/06/go-to-top-png-5.png" alt="back to top"></a>
+    <a id="bottom" href="#footer" ><img  src="https://pngimage.net/wp-content/uploads/2018/06/go-to-top-png-5.png" alt="back to bottom"></a>
+
+    <script>
+    
+        let name = prompt("What is your name please?");
+        let age = prompt(`${name}, enter your age please`);
+        alert("Next, I will need your to enter your weight and height to calculate the BMI for your body and see if you need exercising");
+        let weight = Number(prompt("Enter your weight in kg please\nExample: 70"));
+        let height = Number(prompt("Enter your height in meters please\nExample: 1.85"));
+
+        let h1 = document.querySelector("main h1");
+        h1.innerHTML = `${name}, your BMI is:`;
+
+        let h2 = document.querySelector("main h2");
+        let p = document.querySelector("main p");
+
+        let bmi = (weight / height ** 2).toFixed(1);
+        console.log(bmi);
+        if (bmi < 18.5 ){
+            h2.innerHTML = "Being underweight could be a sign you're not eating enough or may indicate an underlying medical condition. If you're underweight, contact your doctor for further evaluation.";
+            p.innerHTML = bmi;
+            p.style.color = "cyan";
+
+        } else if (bmi >= 18.5 && bmi <= 24.9) {
+            h2.innerHTML = "The medical community recommends keeping your weight within this range.";
+            p.innerHTML = bmi;
+            p.style.color = "green";
+
+        } else {
+            h2.innerHTML = "You may be at risk of developing obesity, so we recommend that you do more exercising."
+            p.innerHTML = bmi;
+            p.style.color = "red";
+
+        }
+        
+    </script>
+</body>
+</html>
